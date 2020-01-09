@@ -35,25 +35,28 @@ public class RegisterController {
 	
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String registerUserPost(@Valid User user, BindingResult result, Model model) {
-
-		if (result.hasErrors()) { 
+		
+		System.out.println(result.getAllErrors());
+		
+		if (result.hasErrors()) {
 			return "registerUser";
 		}
 
 		List<User> userList = userService.getAllUsers();
 
-		for (int i = 0; i < userList.size(); i++) {
-			
-			if (user.getUname().equals(userList.get(i).getUname())) { // 원래 있는 사용자를 입력했다면
-
-				model.addAttribute("usernameMsg", "username already exist");
-
-				return "registerUser";
-			}
-		}
+		/*
+		 * for (int i = 0; i < userList.size(); i++) {
+		 * 
+		 * if (user.getUname().equals(userList.get(i).getUname())) { // 원래 있는 사용자를 입력했다면
+		 * 
+		 * model.addAttribute("usernameMsg", "username already exist");
+		 * 
+		 * return "registerUser"; } }
+		 */
 		
 		
 			user.setAuthority("ROLE_USER");
+			userService.addUser(user);
 		
 		return "index";
 	}

@@ -20,14 +20,14 @@
 
 		<form action="<c:url value="login"/>" method="post">
 			<div class="form-group">
-				<label for="username">Username:</label> <input type="text"
-					class="form-control" id="username" placeholder="Enter username"
-					name="username" style="width: 50%">
+				<label for="uname">Username:</label> <input type="text"
+					class="form-control" id="uname" placeholder="Enter username"
+					name="uname" style="width: 50%">
 			</div>
 			<div class="form-group">
-				<label for="pwd">Password:</label> <input type="password"
-					class="form-control" id="pwd" placeholder="Enter password"
-					name="password" style="width: 50%">
+				<label for="upasswd">Password:</label> <input type="password"
+					class="form-control" id="upasswd" placeholder="Enter password"
+					name="upasswd" style="width: 50%">
 			</div>
 
 			<input type="hidden" name="${_csrf.parameterName}"

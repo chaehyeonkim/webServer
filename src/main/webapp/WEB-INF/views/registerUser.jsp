@@ -1,8 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="true"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+
     <!DOCTYPE html>
     <html lang="en">
     
@@ -81,10 +81,10 @@
 <center>
 	<h4 class="mb-3">MEMBER JOIN</h4>
 	<div class="col-md-6 order-md-3 text-left">
-      <form class="needs-validation" name=form1 action="http://localhost:8080/register" method="post">
+      <form class="needs-validation" name=form1 action="http://localhost:8080/hanium/register" method="post">
         <div class="mb-3">
           <label for="uname">이름 </label>
-          <input type="text" class="form-control" name="uname" placeholder="">
+          <input type="text" class="form-control" name="uname" id="uname" placeholder="">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -92,7 +92,7 @@
 
         <div class="mb-3">
           <label for="uemail">이메일 </label>
-          <input type="text" class="form-control" name="uemail" placeholder="공백없이 입력하세요 ">
+          <input type="text" class="form-control" name="uemail" id="uemail" placeholder="공백없이 입력하세요 ">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -100,7 +100,7 @@
 
         <div class="mb-3">
           <label for="upasswd">비밀번호 </label>
-          <input type="password" class="form-control" name="upasswd" placeholder="">
+          <input type="password" class="form-control" name="upasswd" id="upasswd" placeholder="">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -108,7 +108,7 @@
          
         <div class="mb-3">
           <label for="ubirth">생년월일 </label>
-          <input type="date" class="form-control" name="ubirth" placeholder="1997.10.13">
+          <input type="date" class="form-control" name="ubirth" id="ubirth" placeholder="1997.10.13">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -116,7 +116,7 @@
 
         <div class="mb-3">
           <label for="uaddress">주소 </label>
-          <input type="date" class="form-control" name="uaddress" placeholder="경기도 부천">
+          <input type="date" class="form-control" name="uaddress" id="uaddress" placeholder="경기도 부천">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -124,7 +124,7 @@
    
         <div class="mb-3">
           <label for="utel">휴대전화 </label>
-          <input type="text" class="form-control" name="utel" placeholder="010-****-****">
+          <input type="text" class="form-control" name="utel" id="utel" placeholder="010-****-****">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -132,7 +132,7 @@
 
         <div class="mb-3">
           <label for="interest_duty">관심분야 </label>
-          <input type="text" class="form-control" name="interest_duty" placeholder="select로 바꿔야 될 것 같">
+          <input type="text" class="form-control" name="interest_duty" id="interest_duty" placeholder="select로 바꿔야 될 것 같">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -140,7 +140,7 @@
 
         <div class="mb-3">
           <label for="hope_salary">희망연봉 </label>
-          <input type="" class="form-control" name="hope_salary" placeholder="관심분야 역시 2800 2900 3000과 같이 고를 수 있">
+          <input type="" class="form-control" name="hope_salary" id="hope_salary" placeholder="관심분야 역시 2800 2900 3000과 같이 고를 수 있">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
