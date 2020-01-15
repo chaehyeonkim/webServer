@@ -40,12 +40,12 @@ public class UserDao {
 	}
 
 	@SuppressWarnings("unchecked")
-	public User getUserByUsername(String username) {
+	public User getUserByUsername(String uemail) {
 
 		Session session = sessionFactory.getCurrentSession();
 
-		TypedQuery<User> query = session.createQuery("from User where username = ?");
-		query.setParameter(0, username);
+		TypedQuery<User> query = session.createQuery("from User where uemail = ?");
+		query.setParameter(0, uemail);
 		
 		return query.getSingleResult();
 	}

@@ -116,7 +116,7 @@
 
         <div class="mb-3">
           <label for="uaddress">주소 </label>
-          <input type="date" class="form-control" name="uaddress" id="uaddress" placeholder="경기도 부천">
+          <input type="text" class="form-control" name="uaddress" id="uaddress" placeholder="경기도 부천">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -132,7 +132,7 @@
 
         <div class="mb-3">
           <label for="interest_duty">관심분야 </label>
-          <input type="text" class="form-control" name="interest_duty" id="interest_duty" placeholder="select로 바꿔야 될 것 같">
+          <input type="text" class="form-control" name="interest_duty" id="interest_duty" placeholder="웹프로그래머">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -140,7 +140,7 @@
 
         <div class="mb-3">
           <label for="hope_salary">희망연봉 </label>
-          <input type="" class="form-control" name="hope_salary" id="hope_salary" placeholder="관심분야 역시 2800 2900 3000과 같이 고를 수 있">
+          <input type="" class="form-control" name="hope_salary" id="hope_salary" placeholder="2800">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>

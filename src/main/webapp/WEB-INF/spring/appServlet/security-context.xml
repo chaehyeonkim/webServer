@@ -8,8 +8,8 @@
 <security:authentication-manager>
 		<security:authentication-provider>
 			<security:jdbc-user-service data-source-ref="dataSource"
-				users-by-username-query="select uname, upasswd from User where uname=?"
-				authorities-by-username-query="select uname, authority form User where uname=?" />
+				users-by-username-query="select uemail, upasswd from User where uemail=?"
+				authorities-by-username-query="select uemail, authority form User where uemail=?" />
 		</security:authentication-provider>
 	</security:authentication-manager>
 	
