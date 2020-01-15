@@ -23,9 +23,9 @@ public class RecruitmentService {
 		return recruitmentDao.getRecruitments();
 	}
 
-	public List<Recruitment> getSearchRecruitments(String work_location, String recruitment_school, String company_scale, String recruitment_form) {
+	public List<Recruitment> getSearchRecruitments(String work_location, String recruitment_school, List<Integer> companyId, String recruitment_form) {
 
-		return recruitmentSearchDao.getRecruitments(work_location,recruitment_school,company_scale,recruitment_form);
+		return recruitmentSearchDao.getRecruitments(work_location,recruitment_school,companyId,recruitment_form);
 	}
 
 }

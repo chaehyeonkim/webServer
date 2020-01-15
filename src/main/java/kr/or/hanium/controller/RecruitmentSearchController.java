@@ -43,24 +43,25 @@ public class RecruitmentSearchController {
         String recruitment_form = request.getParameter("recruitment_form");
         
         System.out.println(work_location+ " "+recruitment_school+" "+company_scale);
+        
+        List<Company> companyInfo = new ArrayList<>();
+        List<Integer> companyId= new ArrayList<>();
+        
+        companyInfo=companyService.getCompanyInfo(company_scale);
+        
+        for(int i=0;i<companyInfo.size();i++) {
+        	companyId.add(companyInfo.get(i).getCompany_id());
+        }
+        
         List<Recruitment> recruitments=recruitmentService
-        		.getSearchRecruitments(work_location,recruitment_school,company_scale,recruitment_form);
+        		.getSearchRecruitments(work_location,recruitment_school,companyId,recruitment_form);
+        
+         //model.addAttribute("company", company);
+         
+        
        model.addAttribute("recruitments", recruitments);
        
-       List<Company> companyInfo = new ArrayList<>();
-       List<Company> company= new ArrayList<>();
-       System.out.println("a");
-        for(int i=0;i<recruitments.size();i++) {
-        	// 해당 recruitment의 id를 가지고 company 정보 가져오기
-        	System.out.println(recruitments.get(i).getCompany());
-            companyInfo = companyService.getCompanyInfo(company_scale);
-            company.add((Company) companyInfo);
-        	//company.add(recruitments.get(i).getCompany());
-        }
-        for(int i=0;i<company.size();i++) {
-        	System.out.println(company.get(i));
-        }
-        model.addAttribute("company", company);
+       
         
 		/*
 		 * for(int i=0;i<recruitments.size();i++) {

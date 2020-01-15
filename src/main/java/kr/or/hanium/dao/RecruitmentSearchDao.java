@@ -19,7 +19,7 @@ public class RecruitmentSearchDao {
 	private SessionFactory sessionFactory;
 	
 	@SuppressWarnings("unchecked")
-	public List<Recruitment> getRecruitments(String work_location, String recruitment_school, String company_scale, String recruitment_form) {
+	public List<Recruitment> getRecruitments(String work_location, String recruitment_school, List<Integer> companyId, String recruitment_form) {
 
 		Session session=sessionFactory.getCurrentSession();
 		String queryString = "";
