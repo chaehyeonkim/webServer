@@ -19,10 +19,10 @@ public class CompanyInfoDao {
 	private SessionFactory sessionFactory;
 	
 	@SuppressWarnings("unchecked")
-	public List<Company> getCompanyInfo(Company company) {
+	public List<Company> getCompanyInfo(String company) {
 
 		Session session=sessionFactory.getCurrentSession();
-		Query query=session.createQuery("from Company where company = :company ");
+		Query query=session.createQuery("from Company where company_scale = :company ");
 		query.setParameter("company", company);	
 		
 		List<Company> CompanyInfo =query.list();

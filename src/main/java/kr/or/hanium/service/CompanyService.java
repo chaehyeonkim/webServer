@@ -14,7 +14,7 @@ public class CompanyService {
 	@Autowired
 	private CompanyInfoDao companyInfoDao;
 
-	public List<Company> getCompanyInfo(Company company) {
+	public List<Company> getCompanyInfo(String company) {
 
 		return companyInfoDao.getCompanyInfo(company);
     }

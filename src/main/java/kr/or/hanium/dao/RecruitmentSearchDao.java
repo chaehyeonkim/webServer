@@ -32,10 +32,10 @@ public class RecruitmentSearchDao {
 	         queryString += "where ";
 
 	         if(!work_location.equals("전국")) {
-	            queryString += "work_location = :work_location ";
+	            queryString += "work_location = :work_location and ";
 	         }
 	         if(!recruitment_school.equals("전체")) {
-	            queryString += "recruitment_school = :recruitment_school ";
+	            queryString += "recruitment_school = :recruitment_school and ";
 	         }
 	         if(!recruitment_form.equals("전체")) {
 	            queryString += "recruitment_form = :recruitment_form ";
