@@ -153,7 +153,16 @@
             <tr>
                 <td>회사이름 </td><td>공고 </td><td> </td><td>고용형태 </td><td>공고시작일자 </td><td>공고종료일자 </td><td>회사 URL </td>
             </tr>
-
+            <c:forEach var="recruitment" items="${recruitments}" varStatus="status">
+                <tr>
+                    <td>${company[status.index].company_id }</td>
+                    <td>${recruitment.recruit_name }</td>
+                    <td>${recruitment.recruitment_form }</td>
+                    <td>${recruitment.start_day }</td>
+                    <td>${recruitment.finish_day }</td>
+                    <td>${company[status.index].company_url }</td>
+                </tr>
+            </c:forEach>
         </table>
     </div>
 </div>
