@@ -8,4 +8,8 @@
  		insert into User(uid,uname, uemail, upasswd, ubirth, uaddress, utel, interest_duty, hope_salary, authority)
  		values (#{uid}, #{uname}, #{uemail}, #{upasswd}, #{ubirth}, #{uaddress}, #{utel}, #{interest_duty}, #{hope_salary}, #{authority})
  	</insert>
+
+	<select id="login" resultType="kr.or.hanium.model.LoginDTO">
+		select uemail, upasswd from hanium.User where uemail = #{uemail}
+	</select>
 </mapper>

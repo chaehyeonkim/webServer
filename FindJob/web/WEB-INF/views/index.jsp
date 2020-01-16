@@ -49,7 +49,12 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <c:url value="/login" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">Login</a>
+            <c:if test="${empty loginDTO}">
+              <c:url value="/login" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">Login</a>
+            </c:if>
+            <c:if test="${!empty loginDTO}">
+              <c:url value="/logout" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">Logout</a>
+            </c:if>
           </li>
           <li class="nav-item">
             <c:url value="/register" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">회원가입 </a>
@@ -82,6 +87,31 @@
   <hr>
 </section>
 
+<!-- -->
+<section class="page-section" id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="card portfolio-caption">
+          <h4>네이버 </h4>
+          <p class="text-muted">Naver</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="card portfolio-caption">
+          <h4>데브시스터즈 </h4>
+          <p class="text-muted">Devsisters</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="card portfolio-caption">
+          <h4>카카오 </h4>
+          <p class="text-muted">Kakao</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Footer -->
 <footer class="footer">

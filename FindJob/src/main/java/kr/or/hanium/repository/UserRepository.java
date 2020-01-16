@@ -1,5 +1,6 @@
 package kr.or.hanium.repository;
 
+import kr.or.hanium.model.LoginDTO;
 import kr.or.hanium.model.User;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,5 +17,10 @@ public class UserRepository
     public void addUser(User user) throws Exception
     {
         sqlSession.insert(namespace + ".insert", user);
+    }
+
+    public LoginDTO login(LoginDTO loginDTO) throws Exception
+    {
+        return sqlSession.selectOne(namespace + ".login", loginDTO.getUemail());
     }
 }

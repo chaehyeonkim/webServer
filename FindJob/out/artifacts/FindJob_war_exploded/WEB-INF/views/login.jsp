@@ -80,19 +80,8 @@
  <h3 align=center>LOGIN</h3>
  <div id="shortcodePreviews">
      <div id="formPreview">
-         <c:if test="${not empty errorMsg }">
-             <div style="color: #ff0000;">
-                 <h3>${errorMsg }</h3>
-             </div>
-         </c:if>
 
-         <c:if test="${not empty logoutMsg }">
-             <div style="color: #0000ff;">
-                 <h3>${logoutMsg }</h3>
-             </div>
-         </c:if>
-
-         <form class="border border-light p-5" method=POST action="<c:url value="login"/>">
+         <form class="border border-light p-5" method=POST action="<c:url value="/login"/>">
 
              <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" name="uemail" placeholder="E-mail">
 
@@ -111,7 +100,7 @@
 
              <div class="text-center">
                  <p>Not a member?
-                     <a href="">Register</a>
+                     <a href="<c:url value="/register"/>">Register</a>
                  </p>
 
                  <p>or sign in with:</p>
@@ -133,59 +122,62 @@
  </div>
 
 <br><br>
+
 <!-- Footer -->
-  <footer class="footer">
+<footer class="footer">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-4">
-          <span class="copyright">Copyright &copy; Your Website 2019</span>
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <span class="copyright">Copyright &copy; FindJob Website 2020</span>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/feed/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks">
+                    <li class="list-inline-item">
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">Terms of Use</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="col-md-4">
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline quicklinks">
-            <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </footer>
+</footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="${pageContext.request.contextPath}/resources/bootstrap/vendor/jquery/jquery.min.js"></script>
-  <script src="${pageContext.request.contextPath}/resources/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="${pageContext.request.contextPath}/resources/bootstrap/vendor/jquery/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="${pageContext.request.contextPath}/resources/bootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="${pageContext.request.contextPath}/resources/bootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Contact form JavaScript -->
-  <script src="${pageContext.request.contextPath}/resources/bootstrap/js/jqBootstrapValidation.js"></script>
-  <script src="${pageContext.request.contextPath}/resources/bootstrap/js/contact_me.js"></script>
+<!-- Contact form JavaScript -->
+<script src="${pageContext.request.contextPath}/resources/bootstrap/js/jqBootstrapValidation.js"></script>
+<script src="${pageContext.request.contextPath}/resources/bootstrap/js/contact_me.js"></script>
 
-  <!-- Custom scripts for this template -->
-  <script src="${pageContext.request.contextPath}/resources/bootstrap/js/agency.min.js"></script>
+<!-- Custom scripts for this template -->
+<script src="${pageContext.request.contextPath}/resources/bootstrap/js/agency.min.js"></script>
 
 </body>
+</html>
+
 </html>
