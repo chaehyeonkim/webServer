@@ -77,7 +77,7 @@
         <p class="margin"><c:url value="/recruitment" var="url"></c:url><a class="menu" href="${url}">채용 </a></p>
       </div>
       <div class="margin">
-        <p class="margin"><c:url value="/recruitmentSearch" var="url"/><a class="menu" href="${url}">상세 검색 </a></p>
+        <p class="margin"><c:url value="/searchRecruitment" var="url"/><a class="menu" href="${url}">상세 검색 </a></p>
       </div>
       <div class="margin">
         <p class="margin"><a class="menu" href="#">뉴스 </a></p>
@@ -91,24 +91,15 @@
 <section class="page-section" id="portfolio">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-sm-6 portfolio-item">
-        <div class="card portfolio-caption">
-          <h4>네이버 </h4>
-          <p class="text-muted">Naver</p>
+      <c:forEach var="recruitment" items="${recruitmentMainList}" varStatus="status">
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <div class="card portfolio-caption">
+            <h4>${companyMainList[status.index].company_name }</h4>
+            <p>${recruitment.recruit_name }</p>
+            <p></p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-4 col-sm-6 portfolio-item">
-        <div class="card portfolio-caption">
-          <h4>데브시스터즈 </h4>
-          <p class="text-muted">Devsisters</p>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6 portfolio-item">
-        <div class="card portfolio-caption">
-          <h4>카카오 </h4>
-          <p class="text-muted">Kakao</p>
-        </div>
-      </div>
+      </c:forEach>
     </div>
   </div>
 </section>

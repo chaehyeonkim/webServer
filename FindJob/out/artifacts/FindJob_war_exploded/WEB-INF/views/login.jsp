@@ -32,48 +32,53 @@
 
 <body id="page-top">
 <header>
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-<div class="container">
-    <c:url value="/" var="url"/><a class="navbar-brand js-scroll-trigger" href="${url}">FindJob</a>
- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-   Menu
-   <i class="fas fa-bars"></i>
- </button>
- <div class="collapse navbar-collapse" id="navbarResponsive">
-   <ul class="navbar-nav text-uppercase ml-auto">
-       <li class="nav-item">
-           <c:url value="/login" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">Login</a>
-       </li>
-       <li class="nav-item">
-           <c:url value="/register" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">회원가입 </a>
-       </li>
-   </ul>
- </div>
-</div>
-</nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <c:url value="/" var="url"/><a class="navbar-brand js-scroll-trigger" href="${url}">FindJob</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <c:if test="${empty loginDTO}">
+                            <c:url value="/login" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">Login</a>
+                        </c:if>
+                        <c:if test="${!empty loginDTO}">
+                            <c:url value="/logout" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">Logout</a>
+                        </c:if>
+                    </li>
+                    <li class="nav-item">
+                        <c:url value="/register" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">회원가입 </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
 
 <!--  Menu -->
 <section class="page-section-top" id="services">
-<hr>
-<div class="container">
-<div class="row text-center">
- <div class="margin">
-   <p class="margin"><c:url value="/" var="url"/><a class="menu" href="${url}}">HOME</a></p>
- </div>
- <div class="margin">
-   <p class="margin"><a class="menu" href="">채용 </a></p>
- </div>
- <div class="margin">
-   <p class="margin"><a class="menu" href="">상세 검색 </a></p>
- </div>
- <div class="margin">
-   <p class="margin"><a class="menu" href="">뉴스 </a></p>
- </div>
-</div>
-</div>
-<hr>
+    <hr>
+    <div class="container">
+        <div class="row text-center">
+            <div class="margin">
+                <p class="margin"><c:url value="/" var="url"/><a class="menu" href="${url}">HOME</a></p>
+            </div>
+            <div class="margin">
+                <p class="margin"><c:url value="/recruitment" var="url"></c:url><a class="menu" href="${url}">채용 </a></p>
+            </div>
+            <div class="margin">
+                <p class="margin"><c:url value="/searchRecruitment" var="url"/><a class="menu" href="${url}">상세 검색 </a></p>
+            </div>
+            <div class="margin">
+                <p class="margin"><a class="menu" href="#">뉴스 </a></p>
+            </div>
+        </div>
+    </div>
+    <hr>
 </section>
   
  <br>

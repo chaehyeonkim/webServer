@@ -81,98 +81,27 @@
     <hr>
 </section>
 
-
 <br>
-<center>
-    <h4 class="mb-3">채용공고 상세검색 </h4>
-    <div class="col-md-6 order-md-3 text-left">
-        <form class="needs-validation" name=form1 action="<c:url value="/recruitmentSearch"/>" method="post">
-            <div class="mb-3">
-                <label for="work_location">근무지역 </label>
-                <select class="custom-select d-block w-100" name="work_location">
-                    <option selected>서울 </option>
-                    <option>경기 </option>
-                    <option>인천 </option>
-                    <option>대전 </option>
-                    <option>세종 </option>
-                    <option>충남 </option>
-                    <option>충북 </option>
-                    <option>광주 </option>
-                    <option>전남 </option>
-                    <option>전북 </option>
-                    <option>대구 </option>
-                    <option>경북 </option>
-                    <option>부산 </option>
-                    <option>울산 </option>
-                    <option>경남 </option>
-                    <option>강원 </option>
-                    <option>제주 </option>
-                    <option>전국 </option>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label for="recruitment_school">학력 </label>
-                <select class="custom-select d-block w-100" name="recruitment_school">
-                    <option selected>대학교졸업(4년) </option>
-                    <option>대학졸업(2,3년) </option>
-                    <option>대학원 석사졸업 </option>
-                    <option>대학원 박사졸업 </option>
-                    <option>학력무관 </option>
-                    <option>전체 </option>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label for="company_scale">기업형태 </label>
-                <select class="custom-select d-block w-100" name="company_scale">
-                    <option selected>대기업 </option>
-                    <option>중견기업 </option>
-                    <option>중소기업 </option>
-                    <option>소기업 </option>
-                    <option>전체 </option>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label for="recruitment_form">고용형태 </label>
-                <select class="custom-select d-block w-100" name="recruitment_form">
-                    <option selected>정규직 </option>
-                    <option>계약직 </option>
-                    <option>인턴 </option>
-                    <option>위촉직 </option>
-                    <option>전체 </option>
-                </select>
-            </div>
-
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
-        </form>
-    </div>
-</center>
-
-<br>
-<c:if test="${!empty recruitments}">
 <div class="row justify-content-center">
     <div class="col-md-8">
         <h4 class="mb-3" align=center>채용 정보 </h4>
         <table class="table">
             <tr>
-                <td>회사이름 </td><td>공고 </td><td> </td><td>고용형태 </td><td>공고시작일자 </td><td>공고종료일자 </td><td>회사 URL </td>
+                <td>회사이름 </td><td>공고 </td><td>고용 형태 </td><td>공고시작일자 </td><td>공고종료일자 </td><td>회사 URL </td>
             </tr>
-            <c:forEach var="recruitment" items="${recruitments}" varStatus="status">
+            <c:forEach var="recruitment" items="${recruitmentList}" varStatus="status">
                 <tr>
-                    <td>${company[status.index].company_id }</td>
-                    <td>${recruitment.recruit_name }</td>
-                    <td>${recruitment.recruitment_form }</td>
-                    <td>${recruitment.start_day }</td>
-                    <td>${recruitment.finish_day }</td>
-                    <td>${company[status.index].company_url }</td>
+                    <td>&nbsp${companyList[status.index].company_name }</td>
+                    <td>&nbsp${recruitment.recruit_name }</td>
+                    <td>&nbsp${recruitment.recruitment_form }</td>
+                    <td>&nbsp${recruitment.start_day }</td>
+                    <td>&nbsp${recruitment.finish_day }</td>
+                    <td>&nbsp${companyList[status.index].company_url }</td>
                 </tr>
             </c:forEach>
         </table>
     </div>
 </div>
-</c:if>
 
 <br><br>
 

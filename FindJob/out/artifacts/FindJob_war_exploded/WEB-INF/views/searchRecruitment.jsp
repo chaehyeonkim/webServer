@@ -43,7 +43,12 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item">
-                        <c:url value="/login" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">Login</a>
+                        <c:if test="${empty loginDTO}">
+                            <c:url value="/login" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">Login</a>
+                        </c:if>
+                        <c:if test="${!empty loginDTO}">
+                            <c:url value="/logout" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">Logout</a>
+                        </c:if>
                     </li>
                     <li class="nav-item">
                         <c:url value="/register" var="url"/><a class="nav-link js-scroll-trigger" href="${url}">회원가입 </a>
@@ -63,13 +68,13 @@
                 <p class="margin"><c:url value="/" var="url"/><a class="menu" href="${url}">HOME</a></p>
             </div>
             <div class="margin">
-                <p class="margin"><c:url value="/" var="url"/><a class="menu" href="${url}">채용 </a></p>
+                <p class="margin"><c:url value="/recruitment" var="url"></c:url><a class="menu" href="${url}">채용 </a></p>
             </div>
             <div class="margin">
-                <p class="margin"><c:url value="/" var="url"/><a class="menu" href="${url}">상세 검색 </a></p>
+                <p class="margin"><c:url value="/searchRecruitment" var="url"/><a class="menu" href="${url}">상세 검색 </a></p>
             </div>
             <div class="margin">
-                <p class="margin"><c:url value="/" var="url"/><a class="menu" href="${url}">뉴스 </a></p>
+                <p class="margin"><a class="menu" href="#">뉴스 </a></p>
             </div>
         </div>
     </div>

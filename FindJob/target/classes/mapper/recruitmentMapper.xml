@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="kr.or.hanium.mapper.RecruitmentMapper">
+	<select id="select" resultType="kr.or.hanium.model.Recruitment">
+		select * from hanium.Company, hanium.recruitment where Company.company_id=recruitment.company_id
+	</select>
+
+	<select id="selectMain" resultType="kr.or.hanium.model.Recruitment">
+		select * from hanium.Company, hanium.recruitment where Company.company_id=recruitment.company_id and company_scale='대기업';
+	</select>
+</mapper>
