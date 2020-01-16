@@ -14,7 +14,7 @@ public class Recruitment {
     @NotNull
     private int recruit_id;
     private String recruit_name;
-    private Company company;
+    private int company_id;
     private String recruitment_form;  // 공고 형태
     private String recruit_category;  // 공고 직종
     private String recruitment_school;  // 학력

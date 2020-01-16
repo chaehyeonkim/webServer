@@ -87,9 +87,13 @@
   <hr>
 </section>
 
-<!-- -->
 <section class="page-section" id="portfolio">
   <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">최신 공고 </h2>
+      </div>
+    </div>
     <div class="row">
       <c:forEach var="recruitment" items="${recruitmentMainList}" varStatus="status">
         <div class="col-md-4 col-sm-6 portfolio-item">

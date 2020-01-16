@@ -1,6 +1,7 @@
 package kr.or.hanium.repository;
 
 import kr.or.hanium.model.Company;
+import kr.or.hanium.model.SearchRecruitmentDTO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -21,5 +22,9 @@ public class CompanyRepository {
 
     public List<Company> getCompanyMainList() throws Exception {
         return sqlSession.selectList(namespace + ".selectMain");
+    }
+
+    public List<Company> getSearchCompanyList(SearchRecruitmentDTO search) throws Exception {
+        return sqlSession.selectList(namespace + ".selectSearch", search);
     }
 }

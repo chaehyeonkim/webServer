@@ -32,7 +32,7 @@ public class HomeController {
 
 		List<Recruitment> recruitments = recruitmentService.getRecruitments();
 		model.addAttribute("recruitments", recruitments);
-
+		logger
 		return "index";
 	}
 
